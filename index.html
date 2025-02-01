@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive Linestring Map</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@elfalem/leaflet-curve@0.9.2/dist/leaflet.curve.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="key.js"></script>
+    <script defer src="map.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div id="map"></div>
+
+    <div class="button-wrappers">
+        <select class="shape-type">
+            <option value="polyline">Polyline</option>
+            <option value="polygon">Polygon</option>
+        </select>
+        <select class="polyline-mode">
+            <option value="standard">Standard</option>
+            <option value="percentage" selected>With Percentages</option>
+        </select>
+        <select class="line-type">
+            <option value="straight" selected>Straight Lines</option>
+            <option value="curved">Curved Lines</option>
+        </select>
+        <select class="map-type">
+            <option value="street">Streets</option>
+            <option value="satellite">Satellite</option>
+        </select>
+        <button id="exportButton">Export to JSON</button>
+        <div id="pointCount">Points: 0</div>
+    </div>
+
+</body>
+
+
+</html>
